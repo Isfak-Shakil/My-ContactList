@@ -1,14 +1,14 @@
 package com.example.mycontactlist.view;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.lifecycle.Observer;
-import androidx.lifecycle.ViewModelProvider;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.lifecycle.Observer;
+import androidx.lifecycle.ViewModelProvider;
 
 import com.example.mycontactlist.R;
 import com.example.mycontactlist.viewModel.SignInViewModel;
@@ -93,7 +93,7 @@ public class SignInActivity extends AppCompatActivity {
         signInViewModel.authenticateLiveData.observe(this, new Observer<String>() {
             @Override
             public void onChanged(String s) {
-                Toast.makeText(SignInActivity.this,""+s,Toast.LENGTH_SHORT).show();
+              //  Toast.makeText(SignInActivity.this,""+s,Toast.LENGTH_SHORT).show();
                 Intent intent=new Intent(SignInActivity.this,MainActivity.class);
                 startActivity(intent);
                 finish();
